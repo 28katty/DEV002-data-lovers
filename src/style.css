@@ -12,6 +12,7 @@
     /* display: flex;
     justify-content: center; */
     font-family: 'Lato', sans-serif;
+
   }
   h1 {
       margin: 5% 20%;
@@ -132,7 +133,7 @@ cursor: pointer;
       /*border: 1px solid red;*/
     }
     .header__content{
-     justify-content: flex-start;
+    justify-content: flex-start;
     }
   }
   /* container */
