@@ -9,8 +9,8 @@
     color: white;
     background-color: black;
     min-height: 100vh;
-    /* display: flex;
-    justify-content: center; */
+    display: flex;
+    justify-content: center;
     font-family: 'Lato', sans-serif;
 
   }
@@ -25,13 +25,15 @@
       display: flex;
   }
 
-  p{
-    color: white;
-    margin: 100px 60px 30px 60px;
-    font-size: 1.5em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
+  .lol_nombre{
+    width: 30%;
+    margin: 0 auto;
   }
+
+  .icon_search{
+    width: 5%;
+  }
+
   img{
     width: 100%;
   }
