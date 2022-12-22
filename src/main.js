@@ -1,8 +1,8 @@
 import { champDat } from './data/lol/lol.js'
-import { filter } from './script/data.js'
+import { filter, ordenar, ordenarZa } from './script/data.js'
 
-
-const championArray = Object.values(champDat[0].data)
+let championArray = Object.values(champDat[0].data)
+console.log(championArray)
 peticion()
 function peticion(){
 
@@ -33,7 +33,6 @@ function peticion(){
     `;
     }
     contenedor.innerHTML = cardHTML;
-
     }
     championUser(championArray)
 
@@ -47,72 +46,62 @@ function peticion(){
     const azBtn = document.getElementById("az")
     const zaBtn = document.getElementById("za")
 
-
-
   // remover elementos
   const removeElement = () => {
     let cards = document.querySelectorAll(".gallery__card");
     cards.forEach((item) => item.remove());
   };
 
-  // ordenar
-  const ordenar = (data) => {
-    const ordenarAz = data.slice().sort((a,b) => {
-      if (a[0] < b[0]) {
-    return -1;
-  }
-  if (a[0] > b[0]) {
-    return 1;
-  }
-  return 0;
-    })
-    championUser(ordenarAz)
-  }
-
 // Eventos de filtrado
 fighterBtn.addEventListener("click", () => {
   removeElement()
-  const filText = filter (championArray,'Fighter')
-  championUser(filText)
+  const fighterText = filter (championArray,'Fighter')
+  championUser(fighterText)
 });
 
 tankBtn.addEventListener("click", ()=>{
 removeElement()
-filter(championArray,'Tank')
+const tankText = filter(championArray,'Tank')
+championUser(tankText)
 })
 
 mageBtn.addEventListener("click", ()=>{
 removeElement()
-filter(championArray,'Mage')
+const mageText = filter(championArray,'Mage')
+championUser(mageText)
 })
 
 assasinBtn.addEventListener("click", ()=>{
 removeElement()
-filter(championArray,'Assassin')
+const assasinText = filter(championArray,'Assassin')
+championUser(assasinText)
 })
 
 supportBtn.addEventListener("click",()=>{
 removeElement()
-filter(championArray,'Support')
+const supportText = filter(championArray,'Support')
+championUser(supportText)
 })
 
 marksmanBtn.addEventListener("click",()=>{
 removeElement()
-filter(championArray,'Marksman')
+const marksmanText = filter(championArray,'Marksman')
+championUser(marksmanText)
 })
 
 
 azBtn.addEventListener('click',() => {
 removeElement()
-// championUser(championArray)
-championUser(championArray.slice().sort())
+let championArray = Object.values(champDat[0].data)
+const azSort = ordenar(championArray)
+championUser(azSort)
 })
 zaBtn.addEventListener('click',() => {
 removeElement()
-championUser(championArray.slice().reverse())
+let championArray = Object.values(champDat[0].data)
+const zaSort = ordenarZa(championArray)
+championUser(zaSort)
 })
-
-
 
 }
 
