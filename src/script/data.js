@@ -1,20 +1,10 @@
-
-/*import { peticion } from "./script/data.js";
-import { showMenu } from "./script/menu.js";
-import { search } from "./script/busqueda.js";
-peticion()
-showMenu()
-search()*/
-
-
 // funcion  filter
 export const filter = (data, textFilter) => {
+  //igual a vacio para el estres
   if(textFilter === ""){
     return false
   }
-  // console.log(data, 15);
   const filtertext = data.filter((item) => item.tags.includes(textFilter));
-  // console.log(filtertext);
   return filtertext
 }
 
@@ -27,4 +17,3 @@ export const filter = (data, textFilter) => {
     const ordenarZa = data.reverse()
     return ordenarZa
   }
-

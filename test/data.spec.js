@@ -1,4 +1,6 @@
 import { filter } from '../src/script/data.js';
+import { ordenar } from '../src/script/data.js';
+import { ordenarZa } from '../src/script/data.js';
 
 const data = [
   {
@@ -35,12 +37,11 @@ const data = [
     tags: ["Assassin", "Mage"]
   }]
 
-
 describe('funcion filter', () => {
   it('is a function', () => {
     expect(typeof filter).toBe('function');
   });
-  it('Estresa tu test', () => {
+  it('Estresa tu test filtrar', () => {
     expect(filter(data, "")).toBeFalsy();
   });
   it('validar el filtrado de tags', () => {
@@ -63,16 +64,35 @@ describe('funcion filter', () => {
       }
     ]);
   });
-
 });
 
-
-/*describe('anotherExample', () => {
+describe('funcion ordenar', () => {
   it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+    expect(typeof ordenar).toBe('function');
   });
+  it('validar el orden de los nombres de los champion', () => {
+    let ordenAz = ordenar(data);
+    expect(ordenAz[0].name).toEqual('Aatrox');
+    expect(ordenAz[1].name).toEqual('Bard');
+    expect(ordenAz[2].name).toEqual('Camille');
+    expect(ordenAz[3].name).toEqual('Darius');
+    expect(ordenAz[4].name).toEqual('Draven');
+    expect(ordenAz[5].name).toEqual('Evelynn');
+  });
+});
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+describe('funcion ordenarZa', () => {
+  it('is a function', () => {
+    expect(typeof ordenarZa).toBe('function');
   });
-});*/
+  it('validar el orden en reversa', () => {
+    let ordenAz = ordenar(data);
+    expect(ordenAz[5].name).toEqual('Evelynn');
+    expect(ordenAz[4].name).toEqual('Draven');
+    expect(ordenAz[3].name).toEqual('Darius');
+    expect(ordenAz[2].name).toEqual('Camille');
+    expect(ordenAz[1].name).toEqual('Bard');
+    expect(ordenAz[0].name).toEqual('Aatrox');
+  });
+});
+

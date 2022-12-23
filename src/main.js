@@ -1,8 +1,9 @@
 import { champDat } from './data/lol/lol.js'
 import { filter, ordenar, ordenarZa } from './script/data.js'
+import { search } from './script/busqueda.js'
+search()
 
 let championArray = Object.values(champDat[0].data)
-console.log(championArray)
 peticion()
 function peticion(){
 
@@ -89,7 +90,7 @@ const marksmanText = filter(championArray,'Marksman')
 championUser(marksmanText)
 })
 
-
+//eventos de ordenado
 azBtn.addEventListener('click',() => {
 removeElement()
 let championArray = Object.values(champDat[0].data)
