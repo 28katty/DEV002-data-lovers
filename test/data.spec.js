@@ -41,7 +41,7 @@ describe('funcion filter', () => {
   it('is a function', () => {
     expect(typeof filter).toBe('function');
   });
-  it('Estresa tu test filtrar', () => {
+  it('Estresando el test filtrar', () => {
     expect(filter(data, "")).toBeFalsy();
   });
   it('validar el filtrado de tags', () => {
@@ -70,6 +70,9 @@ describe('funcion ordenar', () => {
   it('is a function', () => {
     expect(typeof ordenar).toBe('function');
   });
+  it('Estresando el ordenado az', () => {
+    expect(filter(data, "")).toBeFalsy();
+  });
   it('validar el orden de los nombres de los champion', () => {
     let ordenAz = ordenar(data);
     expect(ordenAz[0].name).toEqual('Aatrox');
@@ -84,6 +87,9 @@ describe('funcion ordenar', () => {
 describe('funcion ordenarZa', () => {
   it('is a function', () => {
     expect(typeof ordenarZa).toBe('function');
+  });
+  it('Estresando el orden descendente', () => {
+    expect(filter(data, "")).toBeFalsy();
   });
   it('validar el orden en reversa', () => {
     let ordenAz = ordenar(data);

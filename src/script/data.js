@@ -10,10 +10,16 @@ export const filter = (data, textFilter) => {
 
   // ordenar
   export const ordenar = (data) => {
+    if(data === ""){
+      return false
+    }
     const ordenarAz = data.sort()
     return ordenarAz
   }
   export const ordenarZa = (data) => {
+    if(data === ""){
+      return false
+    }
     const ordenarZa = data.reverse()
     return ordenarZa
   }
