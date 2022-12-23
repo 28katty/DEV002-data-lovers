@@ -3,7 +3,7 @@
 
 ## imagen final del proyecto
 
-![prototipo 1](C:\proyectos_laboratoria\DEV002-DATA-LOVER\DEV002-data-lovers\src\AF.png)
+![prototipo 1]<img src="src/AF.png" alt="texto que se a mostrar en caso que la imag no se luestre">
 
 ## ¿Quienes son los principales usuarios del producto? ##
 - Mis principales usuarios son los jugadores de LOL
